@@ -1,0 +1,11 @@
+# first there has to be a database
+
+CREATE DATABASE twitter_clone;
+USE twitter_clone;
+
+create a tweets table:
+
+columns would be:
+username varchar (15)
+tweet varchar(140)
+favorites (int)
