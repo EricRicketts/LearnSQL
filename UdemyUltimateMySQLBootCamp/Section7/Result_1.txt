@@ -1,0 +1,7 @@
+book_id        | int          | NO  | PRI | | auto_increment
+title          | varchar(100) | YES | ""  | | ""
+author_fname   | varchar(100) | YES | ""  | | ""
+author_lname   | varchar(100) | YES | ""  | | ""
+released_year  | int          | YES | ""  | | ""
+stock_quantity | int          | YES | ""  | | ""
+pages          | int          | YES | ""  | | ""
