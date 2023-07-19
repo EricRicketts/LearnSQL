@@ -1,0 +1,1 @@
+SELECT CONCAT(SUBSTR(title, 1, 10), '...') AS shortened_title FROM books;
