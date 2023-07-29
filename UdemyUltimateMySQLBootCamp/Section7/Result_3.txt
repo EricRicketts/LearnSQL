@@ -1,0 +1,12 @@
++-------------+-----------+----+---+-------------------+--------------+
+|Field        |Type       |Null|Key|Default            |Extra         |
++-------------+-----------+----+---+-------------------+--------------+
+|id           |int        |NO  |PRI|null               |auto_increment|
+|first_name   |varchar(20)|NO  |   |null               |              |
+|last_name    |varchar(20)|NO  |   |null               |              |
+|middle_name  |varchar(20)|YES |   |null               |              |
+|age          |int        |NO  |   |null               |              |
+|BirthTime    |time       |NO  |   |null               |              |
+|BirthDate    |date       |NO  |   |1900-01-01         |              |
+|BirthDateTime|datetime   |NO  |   |1900-01-01 00:00:00|              |
++-------------+-----------+----+---+-------------------+--------------+
