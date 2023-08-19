@@ -54,11 +54,10 @@ FROM books;
 -- Write a query groups author_fname and author_lname and how many books each author
 -- has written
 SELECT
-    author_lname,
-    author_fname,
+    CONCAT(author_fname, ' ', author_lname) AS author_full_name,
     CASE
         WHEN COUNT(*) = 1 THEN CONCAT(COUNT(*), ' book')
         ELSE CONCAT(COUNT(*), ' books')
     END AS books_written
 FROM books
-GROUP BY author_lname, author_fname;
+GROUP BY author_full_name;
