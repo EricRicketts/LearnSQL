@@ -6,4 +6,7 @@ CREATE TABLE companies(
      CONSTRAINT name_and_address UNIQUE(name, address)
 );
 
-ALTER TABLE companies DROP COLUMN phone;
+RENAME TABLE companies TO employer;
+ALTER TABLE companies RENAME employer;
+
+ALTER TABLE companies RENAME COLUMN address TO home_address;
