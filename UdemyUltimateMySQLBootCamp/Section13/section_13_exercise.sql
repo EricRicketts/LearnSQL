@@ -31,26 +31,21 @@ SELECT
     grade
 FROM students
 INNER JOIN papers AS p ON students.id = p.student_id
-GROUP BY first_name, title, grade
-ORDER BY first_name DESC;
+ORDER BY grade DESC;
 
 SELECT
     first_name,
     title,
     grade
 FROM students
-LEFT JOIN papers AS p ON students.id = p.student_id
-GROUP BY first_name, title, grade
-ORDER BY first_name DESC;
+LEFT JOIN papers AS p ON students.id = p.student_id;
 
 SELECT
     first_name,
     IFNULL(title, 'MISSING') AS title,
     IFNULL(grade, 0) AS grade
 FROM students
-         LEFT JOIN papers AS p ON students.id = p.student_id
-GROUP BY first_name, title, grade
-ORDER BY first_name DESC;
+    LEFT JOIN papers AS p ON students.id = p.student_id;
 
 SELECT
     first_name,
