@@ -7,3 +7,6 @@ SELECT email, order_date, amount
 FROM customers
 INNER JOIN orders
 ON customers.id = orders.customer_id;
+
+DESC customers;
+DESC orders;

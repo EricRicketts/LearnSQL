@@ -5,6 +5,24 @@ SELECT
     amount
 FROM customers
 LEFT JOIN orders
+ON customers.id = orders.customer_id;
+
+SELECT
+    last_name,
+    first_name,
+    order_date,
+    amount
+FROM orders
+LEFT JOIN customers
+ON customers.id = orders.customer_id;
+
+SELECT
+    last_name,
+    first_name,
+    order_date,
+    amount
+FROM customers
+LEFT JOIN orders
 ON customers.id = orders.customer_id
 GROUP BY last_name, first_name, order_date, amount
 ORDER BY amount DESC;
