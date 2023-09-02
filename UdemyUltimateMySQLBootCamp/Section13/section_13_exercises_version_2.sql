@@ -73,3 +73,13 @@ FROM students
 LEFT JOIN papers
 ON students.id = papers.student_id
 GROUP BY last_name, first_name;
+
+SELECT
+    last_name,
+    first_name,
+    IFNULL(AVG(grade), 0.00) AS average_grade,
+    IF(AVG(grade) > 75, 'PASSING', 'FAILING') AS passing_status
+FROM students
+LEFT JOIN papers
+ON students.id = papers.student_id
+GROUP BY last_name, first_name;
