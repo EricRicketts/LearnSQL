@@ -52,8 +52,20 @@ SELECT
     IFNULL(COUNT(rating), 0) AS number_of_reviews,
     IFNULL(MIN(rating), 0) AS lowest_rating,
     IFNULL(MAX(rating), 0) AS hightest_rating,
-    IFNULL(AVG(rating), 0) AS average_rating,
+    IFNULL(ROUND(AVG(rating), 2), 0) AS average_rating,
     IF(COUNT(rating) > 0, 'ACTIVE', 'INACTIVE')
 FROM reviewers
 LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
 GROUP BY first_name, last_name;
+
+-- Write a query which returns the title, the ratings for each title, and the full name of the reviewers
+-- who reviewed the given title
+
+SELECT
+    title,
+    rating,
+    CONCAT(first_name, ' ', last_name) AS reviewer
+FROM series
+INNER JOIN reviews ON series.id = reviews.series_id
+INNER JOIN reviewers ON reviews.reviewer_id = reviewers.id
+ORDER BY title;
