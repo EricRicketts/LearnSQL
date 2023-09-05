@@ -23,10 +23,16 @@ SELECT * FROM series ORDER BY released_year DESC;
 SELECT * FROM ordered_series;
 
 ALTER VIEW ordered_series AS
+SELECT * FROM series ORDER BY released_year;
+
+SELECT * FROM ordered_series;
+
+ALTER VIEW ordered_series AS
 SELECT * FROM series
 ORDER BY genre;
 
 SELECT * FROM ordered_series;
 
+DROP VIEW ordered_series;
 -- this just drops the view, but not the data from the series table, DROP VIEW ordered_series;
 

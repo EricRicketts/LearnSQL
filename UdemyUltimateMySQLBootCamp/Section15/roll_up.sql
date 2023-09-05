@@ -21,10 +21,10 @@ FROM full_reviews
 GROUP BY title;
 
 SELECT
-    title,
+    title AS series_title,
     AVG(rating) AS avg_rating
 FROM full_reviews
-GROUP BY title WITH ROLLUP;
+GROUP BY series_title WITH ROLLUP;
 -- the WITH ROLLUP gives us the average of all the individual GROUP BY average ratings.
 
 SELECT
