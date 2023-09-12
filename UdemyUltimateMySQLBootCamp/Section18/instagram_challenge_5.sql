@@ -20,7 +20,9 @@ SELECT
     posted solution) without the ROUND the answer was 3.4730 with the ROUND the answer
     is 3.47.
     This average on takes into account those users who have posted as the INNER JOIN
-    
+    will only select users which are not NULL when joined with the photos table.  In
+    other words the INNER JOIN guarantees every user appearing in the joined photos table
+    has submitted a photo.
 */
 SELECT
     ROUND(COUNT(photos.id)/COUNT(DISTINCT users.id), 2) AS avg
