@@ -1,0 +1,7 @@
+SHOW DATABASES;
+CREATE DATABASE dog_walking_app;
+SHOW DATABASES;
+USE dog_walking_app;
+SELECT DATABASE();
+DROP DATABASE dog_walking_app;
+SELECT DATABASE();
