@@ -1,0 +1,10 @@
+USE ig_clone;
+SELECT DATABASE();
+SHOW TABLES;
+SELECT * FROM users;
+SELECT * FROM tags;
+SELECT * FROM photos;
+SELECT * FROM photo_tags;
+SELECT * FROM likes;
+SELECT * FROM follows;
+SELECT * FROM comments;
